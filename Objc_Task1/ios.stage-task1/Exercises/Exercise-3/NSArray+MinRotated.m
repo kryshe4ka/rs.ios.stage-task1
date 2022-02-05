@@ -48,3 +48,13 @@
 }
 
 @end
+
+
+
+// ЕЩЕ ВАРИАНТЫ:
+// 1) Через KeyValueCoding:  https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/KeyValueCoding/BasicPrinciples.html#//apple_ref/doc/uid/20002170-BAJEAIEE
+//- (NSNumber *)minRotated {
+//    return [self valueForKeyPath:@"@min.self"];
+//}
+
+// 2) Через сортировку массива и взятие первого элемента

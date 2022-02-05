@@ -11,6 +11,7 @@
     }
     
     // если число отрицательное, то делаем его положительным. С модулем сделать не вышло, какая-то ерунда на выходе была.
+    // вот так с модулем надо бы но не работает abs([number intValue])
     if (number.intValue < 0 ) {
         number = @(-number.intValue);
     }
@@ -27,3 +28,18 @@
 }
 
 @end
+
+//  РЕШЕНИЕ ПОЛУЧШЕ
+//- (NSArray *)numberConverter:(NSNumber *)number {
+//
+//    NSString *numberAsString = [NSString stringWithFormat:@"%d", abs([number intValue])];
+//    NSMutableArray *chars = [[NSMutableArray alloc] initWithCapacity:[numberAsString length]];
+//
+//    for (int i=0; i < [numberAsString length]; i++) {
+//        NSString *iChar  = [NSString stringWithFormat:@"%c", [numberAsString characterAtIndex:i]];
+//        [chars addObject:iChar];
+//    }
+//
+//    NSArray *invertedArray = [[chars reverseObjectEnumerator] allObjects];
+//    return invertedArray;
+//}

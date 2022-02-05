@@ -64,6 +64,25 @@
     }
     
     return playerRank;
+    
+//    // БОЛЕЕ НОРМАЛЬНОЕ И ПРАВИЛЬНОЕ РЕШЕНИЕ
+//    NSMutableArray *rankPositions = [[NSMutableArray alloc] initWithCapacity:[playerArray count]];
+//
+//        if (playerArray.count) {
+//            for (NSNumber *rank in playerArray) {
+//                NSMutableSet *rankedSet = [[NSMutableSet alloc] initWithArray:rankedArray];
+//
+//                [rankedSet addObject:rank];
+//
+//                NSSortDescriptor *descriptor = [NSSortDescriptor sortDescriptorWithKey:@"self" ascending:NO];
+//                NSArray *sortedRanks = [rankedSet sortedArrayUsingDescriptors:@[descriptor]];
+//                NSUInteger index = [sortedRanks indexOfObject:rank];
+//
+//                [rankPositions addObject: @(++index)];
+//            }
+//        }
+//
+//        return rankPositions;
  
 }
 
